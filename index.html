@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResearchConnect | Knowledge Graph</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>ResearchConnect</h2>
+    <p class="side-subtitle">University Research Portal</p>
+
+    <a href="#dashboard">Dashboard</a>
+    <a href="#faculty">Faculty Members</a>
+    <a href="#graph">Knowledge Graph</a>
+    <a href="#collaboration">Collaboration Finder</a>
+</div>
+
+<main class="main-content">
+
+    <header>
+        <div>
+            <h1>Research Collaboration Portal</h1>
+            <p>Discover research connections using Knowledge Graphs</p>
+        </div>
+        <div class="profile">University Admin</div>
+    </header>
+
+    <section id="dashboard">
+        <h2>Dashboard Overview</h2>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3 id="facultyCount">0</h3>
+                <p>Total Faculty</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="publicationCount">0</h3>
+                <p>Publications</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="projectCount">0</h3>
+                <p>Research Projects</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="matchCount">0</h3>
+                <p>Collaboration Matches</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faculty">
+        <h2>Faculty Members</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search faculty by name or research interest..."
+        >
+
+        <div id="facultyList" class="faculty-grid"></div>
+    </section>
+
+    <section id="graph">
+        <h2>Research Knowledge Graph</h2>
+        <p>Explore the connections between faculty and research topics.</p>
+
+        <div class="legend">
+            <span>● Faculty</span>
+            <span>● Research Topics</span>
+            <span>● Projects</span>
+        </div>
+
+        <div id="network"></div>
+    </section>
+
+    <section id="collaboration">
+        <h2>Collaboration Opportunities</h2>
+        <p>Faculty members with shared research interests.</p>
+
+        <div id="recommendations"></div>
+    </section>
+
+    <footer>
+        ResearchConnect © 2026 | Knowledge Graph Based System
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
